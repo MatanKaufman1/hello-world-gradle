@@ -36,3 +36,5 @@ graalvmNative {
         }
     }
 }
+archiveBaseName.set("gradle-hello-world")
+archiveVersion.set("1.0.0")

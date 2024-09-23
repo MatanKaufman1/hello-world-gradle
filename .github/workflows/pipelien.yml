@@ -22,7 +22,7 @@ jobs:
 
       - name: JAR versioning
         run: |
-          sed "s/1.0.0/${{ steps.version.outputs.version-string }}/g" build.gradle.kts
+          sed -i "s/1.0.0/${{ steps.version.outputs.version-string }}/g" build.gradle.kts
 
       - name: build
         run: |

@@ -1,7 +1,7 @@
 name: E.T_phone_home
 on:
   push:
-    branches: [ "dev" ]
+    branches: ["master", "dev" ]
 
 jobs:
   build:

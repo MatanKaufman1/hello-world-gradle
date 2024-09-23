@@ -4,7 +4,7 @@ COPY build.gradle.kts .
 COPY gradle gradle
 COPY gradlew .
 COPY src src
-RUN ./gradlew shadowJar
+RUN ./gradlew shadowJar --no-daemon
 
 
 FROM openjdk:24-slim

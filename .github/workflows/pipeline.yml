@@ -37,8 +37,6 @@ jobs:
         with:
           context: .
           push: true
-          build-args: |
-              VER_TAG=${{ steps.version.outputs.version-string }}
           tags: matankaufman/helloworld:${{ steps.version.outputs.version-string }}
 
       - name: PUll and Run from Dockerhub

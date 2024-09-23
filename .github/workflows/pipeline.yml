@@ -18,7 +18,7 @@ jobs:
         with:
           main_branch: ${{ github.ref_name }}
           create_tag: true
-          tag_prefix: v
+          tag_prefix: ${{ github.ref_name == 'dev' && 'dev' || 'master' }}
 
       - name: JAR versioning
         run: |

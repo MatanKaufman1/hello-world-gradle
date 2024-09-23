@@ -39,7 +39,7 @@ jobs:
           push: true
           tags: matankaufman/helloworld:${{ steps.version.outputs.version-string }}
 
-      - name: PUll and Run from Dockerhub
+      - name: Pull and Run from Dockerhub
         run: |
          docker pull matankaufman/helloworld:${{ steps.version.outputs.version-string }}
          docker run  --name E.T_PHONE_HOME matankaufman/helloworld:${{ steps.version.outputs.version-string }}

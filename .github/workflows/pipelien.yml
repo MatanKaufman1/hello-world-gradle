@@ -23,9 +23,11 @@ jobs:
       - name: JAR versioning
         run: |
           sed "s/1.0.0/${{ steps.version.outputs.version-string }}/g" build.gradle.kts
+
       - name: build
         run: |
-           ./gradlew clean shadowjar
+           ./gradlew clean build --no-daemon
+
       - name: Display JAR
         run: |
            ls -l build/libs/

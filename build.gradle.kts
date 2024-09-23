@@ -36,3 +36,8 @@ graalvmNative {
         }
     }
 }
+tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+    archiveBaseName.set("gradle-hello-world")
+    archiveVersion.set("1.0.0")
+}
+
